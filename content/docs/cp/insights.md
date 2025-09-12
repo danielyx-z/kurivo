@@ -43,6 +43,15 @@ Take prefix and suffix sums of positive and negative, because we will always tak
 
 Loop over k, where the fence is painted 1 to k, k+1 to n. Subtract double counted colors that are sufficient to paint both ends.
 
+### [Serval and MEX](https://codeforces.com/contest/2085/problem/B)
+
+Split the array into two halves, MEX it if it has a zero. Then do a final combination.
+
+### [Serval and the Formula](https://codeforces.com/contest/2085/problem/C)
+
+Note any power of 2 does not share any set bits with a number less than it.
+
+
 
 ---
 
