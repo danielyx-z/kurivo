@@ -47,6 +47,9 @@ Loop over k, where the fence is painted 1 to k, k+1 to n. Subtract double counte
 ---
 
 
+### [Guessing Grades](https://dmoj.ca/problem/daacc1p5)
+asd
+
 
 ### [Good Triplets](https://dmoj.ca/problem/ccc22s4)  
 
