@@ -56,6 +56,9 @@ Note any power of 2 does not share any set bits with a number less than it.
 ---
 
 
+### [Guessing Grades](https://dmoj.ca/problem/daacc1p5)
+asd
+
 
 ### [Good Triplets](https://dmoj.ca/problem/ccc22s4)  
 
