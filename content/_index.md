@@ -8,10 +8,9 @@
 - [Competitive Programming](./docs/cp/insights/)
 
 
-most important
-
 when subject verb agreement cancel out the unnecessary
 remember to identify the subject
+stupid plural + single trick
 read it carefull and dont choose half right
 most correct not could be correct
 just mark as review and come back
@@ -366,6 +365,8 @@ ardent - enthusiastic, passionate
 invariably - always
 
 poignant - evoking a keen sense of sadness or regret
+
+duplicitous - deceitful
 
 
 
