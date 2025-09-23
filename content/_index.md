@@ -363,9 +363,64 @@ lament - to mourn or express sorrow
 
 ardent - enthusiastic, passionate
 
-invariably - always
-
 poignant - evoking a keen sense of sadness or regret
+
+credence - belief/acceptance in something as being true 
+
+caucus - a meeting of members of a party
+
+vernacular - ordinary language of a region
+
+contentious - controversial
+
+deplore - condemn (his deplorable actions)
+
+implore - beg someone desperately to do something
+
+aberrant - departing from an accepted standard
+
+valorize - to give value to something
+
+acerbic - especially of speaking, sharp and direct
+
+quaint - attractively unusual or old fashioned
+
+melancholy - pensive emoji
+
+countenance - facial expression, visage; admit as possible
+
+whimsical - playfully imaginative, in an amusing way
+
+allegory - a story with a interpreted hidden meaning
+
+mused - be absorbed in thought
+
+nebulous - hazy
+
+herald - to give news of
+
+harbinger - someone that announces the forthcoming of another
+
+panacea - cure all 
+
+mariner - sailor
+
+vacuous - vacant, blank
+
+seditious - inciting rebellion
+
+belligerent - hostile and aggresive
+
+debonair - stylish and charming
+
+contend - struggle to overcome; to assert a position
+
+engender - give rise to 
+
+
+
+
+
 
 
 
