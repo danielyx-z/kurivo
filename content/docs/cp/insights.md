@@ -3,6 +3,9 @@ title: Insights for Problems
 weight: 1
 ---
 
+
+## Codeforces
+
 ### [Knight's Moves](https://codeforces.com/group/jtU6D2hVEi/contest/533280/problem/F)
 
 Each move reduces manhattan distance to finish, so process dp in order of decreasing manhattan.
@@ -53,7 +56,7 @@ Note any power of 2 does not share any set bits with a number less than it.
 
 
 
----
+## DMOJ
 
 
 ### [Guessing Grades](https://dmoj.ca/problem/daacc1p5)
@@ -112,3 +115,20 @@ DP in order of values to avoid overcounting, and process subset products backwar
 
 
 
+
+
+## USACO
+
+### [2D Conveyor Belt](https://usaco.org/index.php?page=viewproblem2&cpid=1448)
+
+Offline processing key takeaways:
+- When you are given all queries to start.
+- When the problem involves an operation whose reverse operation is fast.
+- Often removing something (ex. removing connections -> DSU for reverse is fast, min/max/gcd removal, reverse the order of processing)
+- Another example is blocking cell, -> opening cell (bfs/flood fill)
+- Deleting value -> inserting value (heap, set)
+
+Key for this problem is a new conveyor belt might cut off a large portion, which requires recalculation. But opening a loop is just once dfs.
+
+### [Cow Checkups](https://usaco.org/index.php?page=viewproblem2&cpid=1470)
+Find a mathematical formula to calculate, then split the min(a, b) expression into cases when a is true and when b is true. Sum by maintaining a stack.
