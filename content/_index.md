@@ -7,6 +7,8 @@
 - [Calculus BC Notes](./docs/ap/calc/)
 - [Competitive Programming](./docs/cp/insights/)
 
+## Books i guess for daniel
+- [amc12](/static/Mastering_AMC_1012_Book.pdf)
 
 when subject verb agreement cancel out the unnecessary
 remember to identify the subject
