@@ -9,10 +9,11 @@ title: Programming
 #ifdef RTX5050
 #include "debugging.h"
 #endif
+using namespace std;
 #define all(x) (x).begin(), (x).end()
 using ll = long long;
 using pii = pair<ll, ll>;
-using namespace std;
+
 
 void solve() {
 
@@ -28,6 +29,7 @@ int main() {
 }
 ```
 
+# Segment Tree
 ```
 struct Node {
 
@@ -81,6 +83,26 @@ void update(int node, int left, int right, int index, ll value) {
 }
 ```
 
+
+# Binary Index Tree
+```
+//remember its 1-indexed
+ll bit[MAXN];
+
+void update(int i, int val) {
+    for (; i <= n; i += i & -i) 
+        bit[i] += val;
+}
+
+ll query(int i) {
+    ll res = 0;
+    for (; i > 0; i -= i & -i) 
+        res += bit[i];
+    return res;
+}
+```
+
+
 ```
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
@@ -96,24 +118,6 @@ template<class T> using oset = tree<T, null_type, less<T>, rb_tree_tag, tree_ord
 //iterator to what is at index i, pretty straightforward
 ```
 
-```
-//remember its 1-indexed
-ll bit[MAXN];
-
-void update(int i, int val) {
-    for (; i <= n; i += i & -i) 
-        bit[i] += val;
-}
-
-ll query(int i) {
-    llres = 0;
-    for (; i > 0; i -= i & -i) 
-        res += bit[i];
-    return res;
-}
-```
-
-
 
 ## DP checklist
 1. Identify Overlapping Subproblems
@@ -121,11 +125,11 @@ Look for a recursive structure where subproblems repeat.
 Think: "Can I break this problem into smaller versions of itself?"
 
 2. Define the State
-Clearly define dp[i] (or dp[i][j] in 2D cases) in words.
+Clearly define dp[i] in words.
 Ensure it fully captures the problem’s essential information at step i.
 
 3. Establish the Transition
-Determine how dp[i] relates to previous states. Ensure the ordering is correct (states don't modify old on es).
+Determine how dp[i] relates to previous states. Ensure the ordering is correct (states don't modify old ones).
 
 4. Base Case(s)
 Identify simple cases where the answer is directly known.
