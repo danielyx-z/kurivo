@@ -6,7 +6,12 @@ title: Programming
 ## Standard Codeforces Template
 ```
 #include <bits/stdc++.h>
-
+#ifdef RTX5050
+#include "debugging.h"
+#endif
+#define all(x) (x).begin(), (x).end()
+using ll = long long;
+using pii = pair<ll, ll>;
 using namespace std;
 
 void solve() {
@@ -75,6 +80,39 @@ void update(int node, int left, int right, int index, ll value) {
     }
 }
 ```
+
+```
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+
+using namespace __gnu_pbds;
+
+template<class T> using oset = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+
+//order_of_key(k) how many elements strictly LESS than k?
+//0-indexed rank of k.
+
+//find_by_order(i) 
+//iterator to what is at index i, pretty straightforward
+```
+
+```
+//remember its 1-indexed
+ll bit[MAXN];
+
+void update(int i, int val) {
+    for (; i <= n; i += i & -i) 
+        bit[i] += val;
+}
+
+ll query(int i) {
+    llres = 0;
+    for (; i > 0; i -= i & -i) 
+        res += bit[i];
+    return res;
+}
+```
+
 
 
 ## DP checklist

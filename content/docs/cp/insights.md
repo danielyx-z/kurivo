@@ -113,8 +113,14 @@ BIT to optimize transition to logn with 1. get maximum from 0 to h and 2. update
 
 DP in order of values to avoid overcounting, and process subset products backwards to avoid overwriting dp values.
 
+### [King Gruff](https://dmoj.ca/problem/cco14p2)
+For an edge, the shortest distance path through that edge is distA[u] + w + distB[v], where distA and distB are calculated with one run of dijkstra each from the start and end nodes. You can also create a super-source and super-sink, by connecting 0-weight edges from the source to any possible set of starting A's.
 
+### [Exercise Deadlines](https://dmoj.ca/problem/cco20p2)
+Process back to front and count inversions in nlogn with BIT. Key is to process right to left, because its most constrained: try to deal with most restrictive first.
 
+### [Math Homework](https://dmoj.ca/problem/ccc21s5)
+When there is a value in array that needs to satisfy many range constraints, try considering all combined constraints on one position rather than constraing by constraint. Also, when there are monotonic functions (gcd, and, or, min, max) that have a shrinking property on a range, there are usually far fewer state changes than there are elements in that range. You can track the indices where it actually changes and binary search or something.
 
 
 ## USACO
@@ -132,9 +138,3 @@ Key for this problem is a new conveyor belt might cut off a large portion, which
 
 ### [Cow Checkups](https://usaco.org/index.php?page=viewproblem2&cpid=1470)
 Find a mathematical formula to calculate, then split the min(a, b) expression into cases when a is true and when b is true. Sum by maintaining a stack.
-
-### [King Gruff](https://dmoj.ca/problem/cco14p2)
-For an edge, the shortest distance path through that edge is distA[u] + w + distB[v], where distA and distB are calculated with one run of dijkstra each from the start and end nodes. You can also create a super-source and super-sink, by connecting 0-weight edges from the source to any possible set of starting A's.
-
-### [Exercise Deadlines](https://dmoj.ca/problem/cco20p2)
-Process back to front and count inversions in nlogn with BIT. Key is to process right to left, because its most constrained: try to deal with most restrictive first.
