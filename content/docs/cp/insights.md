@@ -123,6 +123,47 @@ Process back to front and count inversions in nlogn with BIT. Key is to process 
 When there is a value in array that needs to satisfy many range constraints, try considering all combined constraints on one position rather than constraing by constraint. Also, when there are monotonic functions (gcd, and, or, min, max) that have a shrinking property on a range, there are usually far fewer state changes than there are elements in that range. You can track the indices where it actually changes and binary search or something.
 
 
+### [Minimum Cost Roads](https://dmoj.ca/problem/ccc23s4)
+In a standard Graph/Tree problem, an edge (u,v) is redundant if u and v are already connected (creates a cycle). In this "Distance-Preserving" problem, the definition of redundancy changes slightly:
+
+    Standard MST: Redundant if connected(u, v) is true.
+
+    Metric MST: Redundant if dist(u, v) <= edge.length.
+
+You can generalize Kruskal's algorithm to almost any property by changing the definition of "Redundant."
+
+Here is the breakdown of the proof and the key patterns you can steal for future problems.
+Part 1: The Proof (Why does this work?)
+
+The problem asks for a minimum cost subset of roads such that distances don't increase.
+
+Let's verify this strategy: "Sort edges by Length. Iterate. If a path ≤L already exists, discard the edge. Otherwise, keep it."
+
+We need to prove two things:
+
+    Safety: Discarding an edge won't violate the rules later.
+
+    Necessity: Keeping an edge is absolutely required if the condition is met.
+
+1. The "Safety" Argument (The Replacement Principle)
+
+Suppose we are looking at an edge e between u and v with length L. Our algorithm decides to discard this edge because there is already a path P between u and v with total length Lpath​≤L.
+
+Is this safe? Imagine there is some random trip from city X to city Y that originally used edge e as a shortcut.
+
+    Original Distance: Dold​=(dist X→u)+L+(dist v→Y).
+
+    Since we deleted e, the traveler must take the alternative path P instead.
+
+    New Distance: Dnew​=(dist X→u)+Lpath​+(dist v→Y).
+
+Since Lpath​≤L, it is guaranteed that Dnew​≤Dold​. The traveler's journey effectively never gets longer. Therefore, deleting the edge is safe.
+
+
+### [A Graph Problem](https://dmoj.ca/problem/nccc3s4)
+Basically same as starting off with complete graph, and subtracting 1 from each node. So sum of edges has to be even, and there needs to be enough of the smaller ones to delete the biggest.
+
+
 ## USACO
 
 ### [2D Conveyor Belt](https://usaco.org/index.php?page=viewproblem2&cpid=1448)

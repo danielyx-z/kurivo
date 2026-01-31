@@ -57,7 +57,7 @@ void constructTree(int node, int left, int right) {
 Node query(int node, int qlow, int qhigh, int left, int right) {
     if (left == qlow && right == qhigh) return tree[node];
 
-    int mid = (left + right) / 1;
+    int mid = (left + right) / 2;
     
     if (qhigh <= mid) {
         return query(node * 2 + 1, qlow, qhigh, left, mid); // Fully in left child
@@ -101,6 +101,34 @@ ll query(int i) {
     return res;
 }
 ```
+
+
+# RMQ
+```
+ll st[22][100001];
+
+
+ll query(int l, r) {
+    int k = 0;
+    while (1<<(k+1) <= r-l+1) k++;
+    return max(st[k][l], st[k][r-(1<<k)+1]);
+}
+
+
+//construction
+for (int i=0; i<n; i++) {
+    st[0][i] = arr[i];
+}
+
+
+for (int k=1; k<22; k++) {
+    for (int i=0; i+(1<<k)<=n; i++) {
+        st[k][i] = max(st[k-1][i], st[k-1][i+(1<<(k-1))]);
+    }
+}
+```
+
+
 
 
 ```
