@@ -97,6 +97,17 @@ Another circle = array * 2, check every possible start point for section A, and 
 
 ### [Matching Problem](https://dmoj.ca/problem/hkccc15s2)  
 
+For a matching index, s[i % lenS] = t[i % lenT].
+so s[p] = t[q]
+p = i + lenS * k
+q = i (mod lenT)
+q = p - lenS * k (mod lenT)
+
+lenS * k + lenT * j = p - q
+This is in the form of Bezouts identity. Thus, p - q = a multiple of gcd(lenS, lenT)
+
+Or, p = q (mod gcd(lenS, lenT)) and s[p] = t[q].
+
 ### [Swipe](https://dmoj.ca/problem/ccc24s3)
 
 For each block of values in the target, get the source of the swipe.
@@ -163,6 +174,18 @@ Since Lpath​≤L, it is guaranteed that Dnew​≤Dold​. The traveler's jour
 ### [A Graph Problem](https://dmoj.ca/problem/nccc3s4)
 Basically same as starting off with complete graph, and subtracting 1 from each node. So sum of edges has to be even, and there needs to be enough of the smaller ones to delete the biggest.
 
+### [Odd Alpacas](https://dmoj.ca/problem/aac1p5)
+
+Counting number of even and odd paths between any nodes in a tree. Assuming its rooted at 1, the distance from A to B is distance from A to 1 to B - 2*the common path.
+
+Parity stays the same, so distance is equal to dis[A] + dis[B].
+
+Assuming the edge from par(u) -> u, all nodes in u's subtree will change parity of distance to 1. Calculate odd[u], even[u] for all nodes, the number of nodes that are odd distance to 1 and even distance to 1.
+
+we need to maintain Total_even and Total_odd counts.
+number of odd paths is #even nodes * #odd nodes, since its a tree you have one parent only for each edge.
+
+
 
 ## USACO
 
@@ -179,3 +202,6 @@ Key for this problem is a new conveyor belt might cut off a large portion, which
 
 ### [Cow Checkups](https://usaco.org/index.php?page=viewproblem2&cpid=1470)
 Find a mathematical formula to calculate, then split the min(a, b) expression into cases when a is true and when b is true. Sum by maintaining a stack.
+
+### [Bovine Acrobatics](https://usaco.org/index.php?page=viewproblem2&cpid=1350)
+Note that a stack can also act as a priority queue if the elements are inserted in sorter order, and are pushed to the back in order. Key idea: cow compression (think when you need a difference array, you might be able to pull this compression off also)
