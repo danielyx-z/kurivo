@@ -185,6 +185,20 @@ Assuming the edge from par(u) -> u, all nodes in u's subtree will change parity 
 we need to maintain Total_even and Total_odd counts.
 number of odd paths is #even nodes * #odd nodes, since its a tree you have one parent only for each edge.
 
+### [Sjekira](https://dmoj.ca/problem/coci20c2p4)
+
+Cut around the max node, and do some lazy pq shit. but see bolaloon's sorting solution?????????
+also reverse processing
+key things to takeaway: when doing dsu make sure ur doing on the ROOTS
+
+
+### [Typical CCC Senior Problem](https://dmoj.ca/problem/tcc1p2)
+Notice that because an element might get removed by an offending integer to the right, we should again process in reverse from right to left and add overkill. 
+
+### [Kittan's Dilemma](https://dmoj.ca/problem/dmopc14c5p4)
+Interesting binary search psa thing. So when you are taking a continuous prefix of good and bad, you can loop through all possible start of good, and take as many bad as you can for NlogN. 
+
+
 
 
 ## USACO
@@ -205,3 +219,4 @@ Find a mathematical formula to calculate, then split the min(a, b) expression in
 
 ### [Bovine Acrobatics](https://usaco.org/index.php?page=viewproblem2&cpid=1350)
 Note that a stack can also act as a priority queue if the elements are inserted in sorter order, and are pushed to the back in order. Key idea: cow compression (think when you need a difference array, you might be able to pull this compression off also)
+
