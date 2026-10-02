@@ -1,5 +1,5 @@
 ---
-title: Psychology Cheat Sheet
+title: Psychology
 weight: 1
 ---
 

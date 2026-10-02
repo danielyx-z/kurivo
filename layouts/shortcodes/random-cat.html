@@ -1,0 +1,13 @@
+<div class="random-cat-container">
+  <img id="dynamic-cat-img" src="https://cataas.com/cat" alt="Random Cat" style="max-width: 100%; height: auto;" />
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var img = document.getElementById("dynamic-cat-img");
+    if (img) {
+      // Append timestamp to bypass browser cache on every visit
+      img.src = "https://cataas.com/cat?" + new Date().getTime();
+    }
+  });
+</script>

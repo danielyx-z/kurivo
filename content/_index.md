@@ -1,14 +1,14 @@
-# A Personal Archive of Notes and Noteworthy Problems
+## A Personal Archive of Notes and Noteworthy Problems
 
-[![Logo](https://i.imgur.com/tq6ptuH.png)](https://cauchymath.xyz)
+
+{{< random-cat >}}
 
 ## Quick Links
 
 - [Calculus BC Notes](./docs/ap/calc/)
 - [Competitive Programming](./docs/cp/insights/)
 
-## Books i guess for daniel
-- [amc12](/static/Mastering_AMC_1012_Book.pdf)
+
 
 when subject verb agreement cancel out the unnecessary
 remember to identify the subject
