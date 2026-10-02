@@ -55,6 +55,10 @@ Split the array into two halves, MEX it if it has a zero. Then do a final combin
 Note any power of 2 does not share any set bits with a number less than it.
 
 
+### [No Cost Too Great](https://codeforces.com/contest/2154/problem/C2)
+
+Prove by contradiction that you only need to do multiple operations on the cheapest element. When having variables, try to set some information (even if its just an inequality)
+
 
 ## DMOJ
 
@@ -198,7 +202,12 @@ Notice that because an element might get removed by an offending integer to the 
 ### [Kittan's Dilemma](https://dmoj.ca/problem/dmopc14c5p4)
 Interesting binary search psa thing. So when you are taking a continuous prefix of good and bad, you can loop through all possible start of good, and take as many bad as you can for NlogN. 
 
+### [Mali](https://dmoj.ca/problem/coci09c1p4)
+Notice the key observation that A, B <= 100. Then you can compress them in a freq map and greedily pair largest with smallest, simulating in O(100) * N time.
 
+### [Fake Painting](https://dmoj.ca/problem/dmopc22c4p2)
+
+You can apply a pigeonhole like argument if u add to one then u must add to the other, and also orientation doesnt matter since u can do filler moves.
 
 
 ## USACO
