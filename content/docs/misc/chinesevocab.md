@@ -1,5 +1,5 @@
 ---
-title: Vocab
+title: Chinese vocab
 weight: 1
 ---
 

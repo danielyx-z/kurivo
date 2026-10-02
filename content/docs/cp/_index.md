@@ -3,7 +3,7 @@ weight: 90
 title: Programming
 ---
 
-## Standard Codeforces Template
+## Codeforces Template
 ```
 #include <bits/stdc++.h>
 #ifdef RTX5050
@@ -28,6 +28,23 @@ int main() {
     }
 }
 ```
+
+
+## DP checklist
+1. Identify Overlapping Subproblems
+Look for a recursive structure where subproblems repeat.
+Think: "Can I break this problem into smaller versions of itself?"
+
+2. Define the State
+Clearly define dp[i] in words.
+Ensure it fully captures the problem’s essential information at step i.
+
+3. Establish the Transition
+Determine how dp[i] relates to previous states. Ensure the ordering is correct (states don't modify old ones).
+
+4. Base Case(s)
+Identify simple cases where the answer is directly known.
+Ensure correct initialization to avoid incorrect propagation.
 
 # Segment Tree
 ```
@@ -131,6 +148,8 @@ for (int k=1; k<22; k++) {
 
 
 
+# Ordered Set
+
 ```
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
@@ -147,18 +166,3 @@ template<class T> using oset = tree<T, null_type, less<T>, rb_tree_tag, tree_ord
 ```
 
 
-## DP checklist
-1. Identify Overlapping Subproblems
-Look for a recursive structure where subproblems repeat.
-Think: "Can I break this problem into smaller versions of itself?"
-
-2. Define the State
-Clearly define dp[i] in words.
-Ensure it fully captures the problem’s essential information at step i.
-
-3. Establish the Transition
-Determine how dp[i] relates to previous states. Ensure the ordering is correct (states don't modify old ones).
-
-4. Base Case(s)
-Identify simple cases where the answer is directly known.
-Ensure correct initialization to avoid incorrect propagation.
