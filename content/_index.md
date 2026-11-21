@@ -3,8 +3,4 @@
 
 {{< random-cat >}}
 
-## Quick Links
-
-- [Calculus BC Notes](./docs/ap/calc/)
-- [Competitive Programming](./docs/cp/insights/)
-
+you got this! :3
