@@ -8,4 +8,3 @@
 - [Calculus BC Notes](./docs/ap/calc/)
 - [Competitive Programming](./docs/cp/insights/)
 
-
